@@ -1,0 +1,87 @@
+/* For Split Screen, cite: https://www.w3schools.com/howto/howto_css_split_screen.asp */
+.split {
+height: 100%;
+width: 50%;
+position: fixed;
+z-index: 0;
+top: 0;
+overflow-x: hidden;
+padding-top: 20px;
+
+}
+
+.left {
+left: 0;
+font-family: 'Exo 2', sans-serif;
+color: white;
+z-index: 0;
+box-shadow: #ffb84c;
+transition: linear .5s;
+outline: none;
+}
+
+.right {
+right: 0;
+font-family: 'Exo 2', sans-serif;
+color: white;
+background-color: #ffb84c;
+font-size: 250%;
+z-index: 0;
+box-shadow: #760EC2;
+transition: linear .5s;
+outline: none;
+}
+
+.centered {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+}
+
+.centered img {
+width: 150px;
+border-radius: 50%;
+}
+
+/* */
+
+.bottom-left {
+bottom: 0;
+position: absolute;
+font-family: 'Exo 2', sans-serif;
+color: white;
+}
+
+.bottom-right {
+bottom: 0;
+position: absolute;
+right: 0;
+}
+
+.btns {
+bottom: 0;
+right: 0;
+position: absolute;
+}
+
+.main {
+color: white;
+font-family: 'Exo 2', sans-serif;
+font-size: 500%;
+display: none;
+}
+
+.time {
+text-align: center;
+font-size: 150%;
+}
+
+@media screen and (max-width: 1185px) {
+    .split {height: fit-content; width: 100%; position: absolute; display: block; height: 50vh;}
+    .left {left: auto; margin-top: 50vh; font-size: 100%; y-overflow: scroll;justify-content: center; align-items: center; }
+    .right {right: auto; }
+    #data{height: 100%; padding: 1em; y-overflow: scroll; max-height: 35vh}
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+}

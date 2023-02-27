@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AV Cubed Timer</title>
+</head>
+<link rel="stylesheet" href="static/css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200&display=swap" rel="stylesheet">
+<body style="background-color: #760EC2;">
+    <div class="split left" id = "left-side">
+        <div class="centered">
+            <h1 id = "data" style="font-size: 250%;"></h1>
+        </div>
+    </div>
+    <div class="split right" id = "right-side">
+        <div class="centered">
+            <h2 id = "scramble-area">null</h2>
+        </div>
+    </div>
+
+    <div class = "centered">
+        <h1 style="z-index: 10;" class = "main" id = "main">0.0</h1>
+    </div>
+    <div class = "bottom-left">
+        <h1 id = "ao5_pos">ao5:</h1>
+        <h1 id = "ao12_pos">ao12: </h1>
+    </div>
+    <div class = "bottom-right">
+        <button onclick="exportTimes()" style="color:transparent; background-color:transparent; border: 1px solid transparent;"><img src="static/img/export.png" width="50"></button>
+        <button onclick="clearData()" style="color:transparent; background-color:transparent; border: 1px solid transparent;"><img src="static/img/trash.png" width="50"></button>
+    </div>
+    <script type="text/javascript" src="static/js/main.js"></script>
+    <script>
+      var userId = {{ id |tojson|safe}};
+      scramble()
+    </script>
+</body>
+</html>
